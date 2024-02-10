@@ -19,6 +19,7 @@ import frc.robot.Constants.OIContants;
 import frc.robot.Constants.AutoContants;
 import frc.robot.Constants.DriveConstants;
 import frc.robot.Subsystems.DriveTrain;
+import frc.robot.Subsystems.Intake;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.RunCommand;
 import edu.wpi.first.wpilibj2.command.SwerveControllerCommand;
@@ -34,9 +35,11 @@ import java.util.List;
 public class RobotContainer {
   // The robot's subsystems
   private final DriveTrain m_robotDrive = new DriveTrain();
+  private final Intake m_Intake = new Intake();
 
   // The driver's controller
   XboxController m_driverController = new XboxController(OIContants.kDriverControllerport);
+  XboxController m_opController = new XboxController(OIContants.kOPController);
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.

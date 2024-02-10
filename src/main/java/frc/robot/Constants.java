@@ -97,6 +97,7 @@ public class Constants {
 
         public static final int kDriverControllerport = 0;
         public static final double kDrivedeadband = 0.05;
+        public static final int kOPController = 1;
     
     }
 
