@@ -23,10 +23,10 @@ public class Constants {
         public static final double kWheelBase = Units.inchesToMeters(25.5);
 
         public static final SwerveDriveKinematics kDriveKinematics = new SwerveDriveKinematics(
-            new Translation2d(kWheelBase / 2, kTrackWidth / 2),
-            new Translation2d(kWheelBase / 2, -kTrackWidth / 2),
-            new Translation2d(-kWheelBase / 2, kTrackWidth / 2),
-            new Translation2d(-kWheelBase / 2, -kTrackWidth / 2));
+                new Translation2d(kWheelBase / 2, kTrackWidth / 2),
+                new Translation2d(kWheelBase / 2, -kTrackWidth / 2),
+                new Translation2d(-kWheelBase / 2, kTrackWidth / 2),
+                new Translation2d(-kWheelBase / 2, -kTrackWidth / 2));
 
         public static final double kFrontLeftChassisAngularOffset = -Math.PI / 2;
         public static final double kFrontRightChassisAngularOffset = 0;
@@ -49,6 +49,17 @@ public class Constants {
 
     }
 
+    public static final class SuperStructure {
+
+        public static final int kIntakeCANId = 1;
+        public static final int kTopShooterCANId = 2;
+        public static final int kBottomShooterCANId = 3;
+        public static final int kClimberCANId = 4;
+        public static final int kArm1CANId = 5;
+        public static final int kArm2CANId = 6;
+
+    }
+
     public static final class ModuleContants {
 
         public static final int kDrivingMotorPinionTeeth = 14;
@@ -60,10 +71,13 @@ public class Constants {
         public static final double kWheelCircumferenceMeters = kWheelDiameterMerters * Math.PI;
 
         public static final double kDrivingMotorReduction = (45.0 * 22) / (kDrivingMotorPinionTeeth * 15);
-        public static final double kDriveWheelFreeSpeedRps = (kDrivingMotorFreeSpeedRps * kWheelCircumferenceMeters) / kDrivingMotorReduction;
+        public static final double kDriveWheelFreeSpeedRps = (kDrivingMotorFreeSpeedRps * kWheelCircumferenceMeters)
+                / kDrivingMotorReduction;
 
-        public static final double kDrivingEncoderPositionFactor = (kWheelDiameterMerters * Math.PI) / kDrivingMotorReduction;
-        public static final double kDrivingEncoderVelocityFactor = ((kWheelDiameterMerters * Math.PI) / kDrivingMotorReduction) / 60.0;
+        public static final double kDrivingEncoderPositionFactor = (kWheelDiameterMerters * Math.PI)
+                / kDrivingMotorReduction;
+        public static final double kDrivingEncoderVelocityFactor = ((kWheelDiameterMerters * Math.PI)
+                / kDrivingMotorReduction) / 60.0;
 
         public static final double kTurningEncoderPostionFactor = (2 * Math.PI);
         public static final double kTurningEncoderVelocityFactor = (2 * Math.PI) / 60.0;
@@ -98,7 +112,7 @@ public class Constants {
         public static final int kDriverControllerport = 0;
         public static final double kDrivedeadband = 0.05;
         public static final int kOPController = 1;
-    
+
     }
 
     public static final class AutoContants {
@@ -112,16 +126,15 @@ public class Constants {
         public static final double kThetaController = 1;
 
         public static final TrapezoidProfile.Constraints kThetaControllerConstraints = new TrapezoidProfile.Constraints(
-            kMaxAngularSpeedRadiansPerSecond, 
-            kMaxAccelerationMetersPerSecondSquared);
-    
-        
+                kMaxAngularSpeedRadiansPerSecond,
+                kMaxAccelerationMetersPerSecondSquared);
+
     }
 
     public static final class NeoMotorContants {
 
         public static final double kFreeSpeenRpm = 5676;
-        
+
     }
-    
+
 }

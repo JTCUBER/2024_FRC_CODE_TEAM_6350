@@ -6,6 +6,8 @@ import com.revrobotics.CANSparkLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
+import frc.robot.Constants.*;
+
 /**
  * The Intake Subsystem is a simple roller system with a single motor for intakeing and reversing
  */
@@ -13,9 +15,9 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Intake extends SubsystemBase{
 
-    private final CANSparkMax m_motor = new CANSparkMax(1, MotorType.kBrushless);
+    private final CANSparkMax m_motor = new CANSparkMax(SuperStructure.kIntakeCANId, MotorType.kBrushless);
 
-    /** Creat a new roller intake subsystem */
+    /** Create a new roller intake subsystem */
 
     public Intake() {
         super();
