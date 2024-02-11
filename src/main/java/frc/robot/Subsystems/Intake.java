@@ -9,11 +9,11 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.*;
 
 /**
- * The Intake Subsystem is a simple roller system with a single motor for intakeing and reversing
+ * The Intake Subsystem is a simple roller system with a single motor for
+ * intakeing and reversing
  */
 
-
-public class Intake extends SubsystemBase{
+public class Intake extends SubsystemBase {
 
     private final CANSparkMax m_motor = new CANSparkMax(SuperStructure.kIntakeCANId, MotorType.kBrushless);
 
@@ -35,10 +35,9 @@ public class Intake extends SubsystemBase{
     }
 
     public void close(double speed) {
-        if (speed > 0) {                  // protect against coding from reversing by accident
+        if (speed > 0) { // protect against coding from reversing by accident
             m_motor.set(0);
-        }
-        else {
+        } else {
             this.stop();
         }
     }
@@ -52,7 +51,7 @@ public class Intake extends SubsystemBase{
     /** Call log method every loop */
     @Override
     public void periodic() {
-            log();
+        log();
     }
-    
+
 }

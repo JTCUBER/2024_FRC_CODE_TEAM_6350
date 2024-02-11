@@ -55,8 +55,8 @@ public class Constants {
         public static final int kTopShooterCANId = 2;
         public static final int kBottomShooterCANId = 3;
         public static final int kClimberCANId = 4;
-        public static final int kArm1CANId = 5;
-        public static final int kArm2CANId = 6;
+        public static final int kArmLeftCANId = 5;
+        public static final int kArmRightCANId = 6;
 
     }
 
